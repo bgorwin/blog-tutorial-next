@@ -27,12 +27,14 @@ export default function Post({ postData }) {
 				<title className='text-lg font-bold'>{postData.title}</title>
 			</Head>
 			<article>
-				<h1 className='text-xl font-bold'>{postData.title}</h1>
+				<h1 className='text-white text-xl font-bold'>
+					{postData.title}
+				</h1>
 				<div className='text-slate-500'>
 					<Date dateString={postData.date} />
 				</div>
 				<div
-					className='pt-5'
+					className='pt-5 text-white'
 					dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
 				/>
 			</article>
