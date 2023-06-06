@@ -2,6 +2,7 @@ import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
+import HeroBanner from "../../components/HeroBanner";
 
 export async function getStaticProps({ params }) {
 	const postData = await getPostData(params.id);
@@ -26,6 +27,7 @@ export default function Post({ postData }) {
 			<Head>
 				<title className='text-lg font-bold'>{postData.title}</title>
 			</Head>
+			<HeroBanner title={postData.title} />
 			<article>
 				<h1 className='text-white text-xl font-bold'>
 					{postData.title}

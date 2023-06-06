@@ -4,7 +4,6 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
-import HeroBanner from "./heroBanner";
 
 const name = "Brent Gorwin";
 export const siteTitle = "Next.js Sample Website";
@@ -29,7 +28,7 @@ export default function Layout({ children, home }) {
 					<meta name='og:title' content={siteTitle} />
 					<meta name='twitter:card' content='summary_large_image' />
 				</Head>
-				<HeroBanner />
+
 				<main className='container mx-auto'>{children}</main>
 				{!home && (
 					<div className='container mx-auto mt-[50px]'>
